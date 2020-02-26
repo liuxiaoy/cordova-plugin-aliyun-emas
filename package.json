@@ -1,0 +1,30 @@
+{
+  "name": "cordova-plugin-aliyun-emas-analytics",
+  "version": "1.0.0",
+  "description": "自定义cordova插件",
+  "cordova": {
+    "id": "cordova-plugin-aliyun-emas-analytics",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pi2star/cordova-plugin-aliyun-emas-analytics.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "xry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pi2star/cordova-plugin-aliyun-emas-analytics/issues"
+  },
+  "homepage": "https://github.com/pi2star/cordova-plugin-aliyun-emas-analytics#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "plist": "^3.0.1",
+    "xml2js": "^0.4.23"
+  }
+}
