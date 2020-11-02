@@ -1,3 +1,13 @@
-﻿.idea
-node_modules/
-package-lock.json
+﻿# ignore project config
+
+.DS_Store
+
+/.idea/
+/.vscode
+/.history
+
+/node_modules
+
+test/node_modules
+test/platforms
+test/plugins

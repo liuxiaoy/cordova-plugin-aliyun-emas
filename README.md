@@ -1,33 +1,16 @@
-# 导航
-- 简介
-- 安装
-- 项目集成
-- API说明
+# cordova-plugin-aliyun-emas
+
+使用阿里云移动研发平台EMAS服务
+
 ## 简介
-`cordova-plugin-aliyun-emas-analytics`是针对阿里云EMAS中`性能分析`、`远程日志`、`崩溃分析`、`移动数据分析`这几个模块而开发的`Cordova`插件，用于解决上述几种阿里云服务只能在原生平台使用的弊端，开发者可以通过集成此插件来实现在任意Cordova框架上使用阿里云EMAS服务
+当前实现了EMAS中的`性能分析`、`远程日志`、`崩溃分析`、`移动数据分析`等模块
 
 ## 安装
-安装方式分两种：
-```shell
-# 通过git安装
-cordova plugin add https://github.com/pi2star/cordova-plugin-aliyun-emas-analytics.git
-```
-```shell
-# 通过npm安装
-cordova plugin add cordova-plugin-aliyun-emas-analytics
-```
-> 注：
-- 开发者在使用该插件前需要在阿里云平台注册相关服务
-- 插件安装好后请执行以下命令以让插件生效：
 
-```shell
-# 不存在platforms
-cordova platform add <ios/android>
-# 已存在platforms
-cordova prepare <ios/android>
-```
-## 项目集成
-在安装插件成功之后需要对Cordova项目进行一定配置才能进行正常使用
+cordova plugin add cordova-plugin-aliyun-emas
+
+## 使用
+
 ### 文件配置
 在`Cordova`项目进行以下配置：的`config.xml`下需进行以下配置：
 #### ios
@@ -122,11 +105,6 @@ AliyunEMAS.info('默认', '这是一条info信息');
 var params = {key4: 'value4', key5: 'value5'}
 AliyunEMAS.customEventBuilder('事件名称', '页面名称', 12, params)
 ```
-### 支持平台
-
-- ios 8+
-- android 5+
-
 
 ## API说明
 ```

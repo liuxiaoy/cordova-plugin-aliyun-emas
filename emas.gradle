@@ -1,0 +1,24 @@
+// Allow plugins to declare Maven dependencies via build-extras.gradle.
+buildscript {
+  repositories {
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+    }
+  }
+  dependencies {
+    // 添加emas-services插件
+    classpath 'com.aliyun.ams:emas-services:1.0.1'
+  }
+}
+
+allprojects {
+    repositories {
+    mavenCentral();
+            jcenter();
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+    }
+}
+
+apply plugin: 'com.aliyun.ams.emas-services'

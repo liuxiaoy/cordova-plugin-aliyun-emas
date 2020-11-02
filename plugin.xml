@@ -1,18 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-aliyun-emas-analytics" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-  <name>XRAnalytics</name>
-  <keywords>cordova,aliyun,emas,aliyunsdk,analytics,tlog,crash,mobile</keywords>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-aliyun-emas"
+        version="0.0.1">
+  <name>EMASPlugin</name>
+
+  <description>Aliyun EMAS Service Cordova plugin</description>
+  <keywords>aliyun, emas, analytics, tlog, crash</keywords>
+  <license>Apache 2.0</license>
+
   <engines>
-  <engine name="cordova-android" version=">=5.0.0" />
+    <engine name="cordova-ios" version=">=3.8" />
+    <engine name="cordova-android" version=">=7" />
   </engines>
+
   <js-module name="AliyunEMAS" src="www/AliyunEMAS.js">
     <clobbers target="AliyunEMAS"/>
   </js-module>
-  <dependency id="cordova-plugin-cocoapod-support"/>
   <platform name="ios">
+    <dependency id="cordova-plugin-cocoapod-support"/>
     <hook src="scripts/before_prepare_ios.js" type="before_prepare"/>
-    <!--插件安装时config.xml配置文件项目位置-->
     <config-file parent="/*" target="config.xml">
       <feature name="AliyunInit">
         <param name="ios-package" value="AliyunInit"/>
@@ -43,7 +50,6 @@
     <pod name="AlicloudCrash"/>
     <pod name="AlicloudTLog"/>
     <pod name="AlicloudMANLight"/>
-    <resource-file src="src/ios/AliyunEmasServices-Info.plist"/>
   </platform>
   <platform name="android">
     <hook src="scripts/before_prepare_android.js" type="before_prepare"/>
@@ -53,18 +59,17 @@
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">
-      <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-      <uses-permission android:name="android.permission.GET_TASKS"></uses-permission>
-      <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
-      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
-      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+      <uses-permission android:name="android.permission.GET_TASKS"/>
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
       <uses-permission android:name="android.permission.READ_SETTINGS"/>
       <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
       <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     </config-file>
     <source-file src="src/android/AliyunEMAS.java" target-dir="src/org/apache/cordova/aliyunemas"/>
-    <framework src="build_extras.gradle" custom="true" type="gradleReference" />
-    <source-file src="src/android/aliyun-emas-services.json" target-dir="/assets"/>
+    <framework src="emas.gradle" custom="true" type="gradleReference" />
   </platform>
 </plugin>

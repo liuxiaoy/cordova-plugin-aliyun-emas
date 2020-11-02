@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.liuxy.test" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>test</name>
+    <description>
+        A sample Apache Cordova application
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <preference name="AliyunXNServe" value="false" />
+    <preference name="AliyunCrashServe" value="false" />
+    <preference name="AliyunTlogServe" value="false" />
+    <preference name="AliyunOpenDebug" value="false" />
+    <preference name="AliyunMobileAnalyticsServe" value="true" />
+    <engine name="android" spec="8.1.0" />
+    <engine name="ios" spec="5.0.1" />
+</widget>
